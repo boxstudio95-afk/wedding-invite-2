@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akash ❤️ Amruta Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Noto Sans Devanagari', sans-serif;
+background: linear-gradient(to bottom,#fff5f5,#ffe6e6);
+text-align:center;
+overflow-x:hidden;
+}
+
+/* 🌸 Floating Flowers */
+.flowers{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.flower{
+position:absolute;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px) rotate(0deg);}
+100%{transform:translateY(100vh) rotate(360deg);}
+}
+
+/* ✨ Animations */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* 📸 Images */
+img{
+max-width:90%;
+border-radius:15px;
+margin:20px 0;
+}
+
+/* Headings */
+h1{
+color:#b30000;
+}
+
+.small{
+font-size:14px;
+color:#555;
+}
+
+.section{
+margin:40px 20px;
+}
+
+.button{
+background:#ff8080;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🌸 Flowers -->
+<div class="flowers">
+<div class="flower" style="left:10%;animation-duration:8s;">🌸</div>
+<div class="flower" style="left:30%;animation-duration:10s;">🌸</div>
+<div class="flower" style="left:50%;animation-duration:12s;">🌸</div>
+<div class="flower" style="left:70%;animation-duration:9s;">🌸</div>
+<div class="flower" style="left:90%;animation-duration:11s;">🌸</div>
+</div>
+
+<!-- 🙏 Header -->
+<div class="section fade">
+<p>|| श्री गणेशाय नमः ||</p>
+
+<img src="images/ganpati.png" width="120">
+
+<h1>शुभविवाह सोहळा</h1>
+</div>
+
+<!-- 📸 Couple Photos -->
+<div class="section fade">
+<img src="images/couple1.jpeg">
+<img src="images/couple2.jpeg">
+<img src="images/couple3.jpeg">
+</div>
+
+<!-- 👰🤵 Info -->
+<div class="section fade">
+
+<h2>ची. आकाश</h2>
+<p class="small">
+कै. माणिकराव भिकोबा जगताप यांचे नातू<br>
+सौ. सुनंदा मधुकर जगताप यांचे सुपुत्र
+</p>
+
+<h2>चि. सौ. का. अमृता</h2>
+<p class="small">
+कै. गणपत बाबुराव जाधव यांची नात<br>
+सौ. निता रामदास जाधव यांची कन्या
+</p>
+
+</div>
+
+<!-- 📅 Details -->
+<div class="section fade">
+<p>
+गुरुवार दि.३०/०४/२०२६<br>
+सायं. ६ वा ४५ मि.
+</p>
+</div>
+
+<div class="section fade">
+<h3>हळदी समारंभ</h3>
+<p>दुपारी १२ वा ३५ मि.</p>
+
+<h3>भोजन समारंभ</h3>
+<p>१ ते ४ व संध्याकाळी ७ नंतर</p>
+</div>
+
+<!-- 📍 Location -->
+<div class="section fade">
+<h3>विवाहस्थळ</h3>
+
+<h2>माऊली गार्डन मंगल कार्यालय</h2>
+
+<p>सासवड-जेजुरी रोड, खळद</p>
+
+<a class="button" href="https://maps.app.goo.gl/eV1uECLEJYQtPxnM8" target="_blank">
+📍 लोकेशन पाहा
+</a>
+</div>
+
+<!-- 🙏 Footer -->
+<div class="section fade">
+<p>🙏 निमंत्रक 🙏</p>
+<p>समस्त जगताप परिवार</p>
+</div>
+
+<!-- ✨ Scroll Animation JS -->
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
